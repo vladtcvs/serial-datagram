@@ -1,6 +1,6 @@
 #include <stdint.h>
 #include <stdbool.h>
-#include <crc/crc32.h>
+#include <crc32.h>
 #include "serial_datagram.h"
 
 #define END         (uint8_t)'\xC0'

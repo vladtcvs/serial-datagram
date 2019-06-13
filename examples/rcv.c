@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "serial_datagram.h"
 
-void callback_fn(const void *dtgrm, size_t len)
+void callback_fn(const void *dtgrm, size_t len, void *arg)
 {
     printf("len %ld ", len);
     printf("[");
@@ -16,7 +16,7 @@ int main(void)
 {
     static char buf[1000];
     serial_datagram_rcv_handler_t h;
-    serial_datagram_rcv_handler_init(&h, buf, sizeof(buf), callback_fn);
+    serial_datagram_rcv_handler_init(&h, buf, sizeof(buf), callback_fn, NULL);
     while (1) {
         char in[10];
         int len = fread(in, sizeof(char), sizeof(in), stdin);
