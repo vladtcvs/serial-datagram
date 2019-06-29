@@ -1,0 +1,11 @@
+prefix=@DEST_DIR@
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include/serial-datagram
+
+Name: libserial_datagram
+Description: Fork of https://github.com/Stapelzeiger/serial-datagram
+Version: 0.2
+
+Libs: -L${libdir} -lserial_datagram @PRIVATE_LIBS@
+Cflags: -I${includedir}

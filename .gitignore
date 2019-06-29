@@ -1,10 +1,6 @@
 *.o
 *.d
 
-examples/rcv
-examples/snd
-
-CMakeLists.txt
 build/*
 dependencies/*
 
